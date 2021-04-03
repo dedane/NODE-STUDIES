@@ -13,14 +13,16 @@ environments.staging = {
     'httpPort': 3000,
     'httpsPort': 3001,
     'envName': 'staging',
-    'hashingSecret': 'thisisASecret'
+    'hashingSecret': 'thisisASecret',
+    'maxChecks': 5
 };
 
 environments.production ={
     'httpPort': 5000,
     'httpsPort': 5001,
     'envName': 'production',
-    'hashingSecret': 'thisisASecret'
+    'hashingSecret': 'thisisASecret',
+    'maxChecks': 5
 }
 
 //DETERMIN WHICH ENVIRONMENT SHOULD BE PASSED AS A COMMAND-LINE ARUMENT
