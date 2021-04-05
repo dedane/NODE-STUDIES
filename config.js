@@ -14,7 +14,12 @@ environments.staging = {
     'httpsPort': 3001,
     'envName': 'staging',
     'hashingSecret': 'thisisASecret',
-    'maxChecks': 5
+    'maxChecks': 5,
+    'twilio' : {
+        'accountSid': 'ACf827d2f19190200c9789c30b1a42af37',
+        'authToken': 'bb20c8eddd1c5abab0038b76f69833ba',
+        'fromPhone': '(617) 581-0640'
+    }
 };
 
 environments.production ={
@@ -22,7 +27,12 @@ environments.production ={
     'httpsPort': 5001,
     'envName': 'production',
     'hashingSecret': 'thisisASecret',
-    'maxChecks': 5
+    'maxChecks': 5,
+    'twilio' : {
+        'accountSid': '',
+        'authToken': '',
+        'fromPhone': ''
+    }
 }
 
 //DETERMIN WHICH ENVIRONMENT SHOULD BE PASSED AS A COMMAND-LINE ARUMENT

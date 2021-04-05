@@ -1,12 +1,19 @@
 // Dependencies
 var http = require('http');
 var https = require('https');
-var url = require('url');
+const url = require('url');
 var StringDecoder = require('string_decoder').StringDecoder;
 var config = require('./config');
 var fs = require('fs');
 var handlers = require('./lib/handlers');
 var helpers = require('./lib/helpers');
+
+
+
+// @TODO GET RID OF THIS
+helpers.sendTwilioSms('0701113792','Hello!', function(req,res){
+  console.log('not sent')
+}) 
 
  // Instantiate the HTTP server
 var httpServer = http.createServer(function(req,res){
@@ -24,7 +31,7 @@ var httpsServerOptions = {
   'cert': fs.readFileSync('./https/cert.pem')
 };
 var httpsServer = https.createServer(httpsServerOptions,function(req,res){
-  unifiedServer(req,res);
+ console.log('This was the error',err)
 });
 
 // Start the HTTPS server
@@ -35,8 +42,8 @@ httpsServer.listen(config.httpsPort,function(){
 // All the server logic for both the http and https server
 var unifiedServer = function(req,res){
 
-  // Parse the url
-  var parsedUrl = url.parse(req.url, true);
+   // Parse the url
+   var parsedUrl = new URL(req.url, true);
 
   // Get the path
   var path = parsedUrl.pathname;
