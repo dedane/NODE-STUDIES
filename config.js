@@ -15,10 +15,10 @@ environments.staging = {
     'envName': 'staging',
     'hashingSecret': 'thisisASecret',
     'maxChecks': 5,
-    'twilio' : {
-        'accountSid': 'ACf827d2f19190200c9789c30b1a42af37',
-        'authToken': 'bb20c8eddd1c5abab0038b76f69833ba',
-        'fromPhone': '(617) 581-0640'
+    'at' : {
+        'apiKey': '1b6547371334b836f58544480aa45a720b1cde4d63d06434d384f7987dee808b',
+        'username': 'sandbox',
+        'fromPhone': '27841'
     }
 };
 
