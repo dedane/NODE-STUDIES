@@ -28,10 +28,10 @@ environments.production ={
     'envName': 'production',
     'hashingSecret': 'thisisASecret',
     'maxChecks': 5,
-    'twilio' : {
-        'accountSid': '',
-        'authToken': '',
-        'fromPhone': ''
+    'at' : {
+        'apiKey': '1b6547371334b836f58544480aa45a720b1cde4d63d06434d384f7987dee808b',
+        'username': 'sandbox',
+        'fromPhone': '27841'
     }
 }
 
